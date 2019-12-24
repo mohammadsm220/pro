@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="369.0" prefWidth="549.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pro.MailController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <VBox prefHeight="369.0" prefWidth="549.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <TableView id="contacts_Table" fx:id="contactsTable" prefHeight="287.0" prefWidth="549.0" />
+        <HBox prefHeight="169.0" prefWidth="549.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER" prefHeight="125.0" prefWidth="549.0" spacing="5.0">
+              <children>
+                <AnchorPane prefHeight="169.0" prefWidth="545.0">
+                  <children>
+                    <Button id="Create_PDF" fx:id="createPDF" layoutX="21.0" layoutY="49.0" mnemonicParsing="false" onAction="#createPDFAction" text="Create PDF" />
+                    <Button id="close_stage" fx:id="closeStage" layoutX="438.0" layoutY="48.0" mnemonicParsing="false" onAction="#closeStageAction" text="Close" />
+                    <Button id="Send_Email" fx:id="sendEmail" layoutX="172.0" layoutY="49.0" mnemonicParsing="false" onAction="#sendEmailAction" text="Send Email" />
+                  </children>
+                </AnchorPane>
+              </children>
+            </HBox>
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

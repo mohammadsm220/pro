@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="557.0" prefWidth="813.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="pro.MainScreenController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <VBox layoutX="0.0" layoutY="-4.0" prefHeight="561.0" prefWidth="813.0">
+      <children>
+        <MenuBar prefWidth="438.0">
+          <menus>
+            <Menu mnemonicParsing="false" text="Contact">
+              <items>
+                <MenuItem disable="false" id="loadContact" mnemonicParsing="false" onAction="#loadContact" text="Load Contact" fx:id="loadContact" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#save" text="Save" fx:id="save" />
+                <MenuItem mnemonicParsing="false" onAction="#clear" text="Clear" fx:id="clear" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <HBox prefHeight="50.0" prefWidth="196.0">
+          <children>
+            <Label prefHeight="36.0" prefWidth="127.0" text="Place Holder" />
+            <ComboBox fx:id="comboBox" onAction="#comboBox" prefHeight="36.0" prefWidth="182.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </children>
+        </HBox>
+        <TextArea id="Text_Area" fx:id="textArea" onKeyTyped="#textArea" prefHeight="380.0" prefWidth="813.0" wrapText="true" />
+        <HBox fillHeight="true" prefHeight="98.0" prefWidth="618.0">
+          <children>
+            <Button fx:id="loadTemplate" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#loadTemplateAction" text="Load Template" textAlignment="CENTER" wrapText="false" />
+            <Label alignment="BASELINE_LEFT" prefHeight="32.0" prefWidth="141.0" text="No File Loaded" />
+            <Button fx:id="starMailMergeProcess" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#mailMergeProcessAction" text="Start Mail Merge Process" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
